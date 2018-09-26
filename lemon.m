@@ -1,5 +1,5 @@
 clc;clear;close all; 
-vid=VideoReader('shrd.mp4'); 
+vid=VideoReader('video.mp4'); 
 count = 0; 
 while hasFrame(vid) 
     readFrame(vid); 
@@ -16,7 +16,7 @@ while hasFrame(vid)
 %      i = i+1; 
 %  end 
  %BG = median(all,3);
- BG=imread('shrd19.jpg');
+ BG=imread('image19.jpg');
  BG = rgb2gray(BG);
  %figure,imshow(BG);
 
@@ -26,7 +26,7 @@ while hasFrame(vid)
     i=i+1;
     if(i==count) break;
     end
-    str=strcat('shrd',num2str(i));
+    str=strcat('image',num2str(i));
     str=strcat(str,'.jpg');
     img=imread(str);
     I0=img;
